@@ -1,0 +1,12 @@
+<launch>
+	<node name="stage" pkg="stage_ros" type="stageros"
+	      args="$(find lab2)/world/playground.world" />
+	
+	<node name="myransac" pkg="lab2" type="myransac" output="screen"
+	     args="$(find lab2)/node/myransac.cpp" /> 
+	      
+	      
+	<node pkg="rviz" type="rviz" name="rviz" args="-d $(find lab2)/launch/lab2_sim.rviz" output="screen"/>
+	
+</launch>    
+
